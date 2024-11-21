@@ -1,8 +1,11 @@
+server:
+  port: 8088
+
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/book_social_network
-    username: username
-    password: password
+    username: postgres
+    password: ronak
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
@@ -30,9 +33,13 @@ spring:
         connectiontimeout: 5000
         timeout: 3000
         writetimeout: 5000
-  application:
-    security:
-      jwt:
-        secret-key: G7X1B9K4M8V2N5P3Q6R7LZ0T8J2F9W5Y3C1X6N8R0L7P2Q5M3V9K4
 
-        expiration: 864000
+
+application:
+  security:
+    jwt:
+      secret-key: G7X1B9K4M8V2N5P3Q6R7LZ0T8J2F9W5Y3C1X6N8R0L7P2Q5M3V9K4
+      expiration: 864000
+  mailing:
+    frontend:
+      activation-url: http://localhost:4200/activate-account

@@ -50,7 +50,7 @@ public class User implements UserDetails, Principal {
     private LocalDateTime lastModifiedDate;
 
 
-    private String fullName(){
+    public String fullName(){
         return firstname+" "+lastname;
     }
 
