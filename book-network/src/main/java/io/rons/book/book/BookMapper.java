@@ -1,5 +1,6 @@
 package io.rons.book.book;
 
+import io.rons.book.file.FileUtils;
 import io.rons.book.history.BookTransactionHistory;
 import org.springframework.stereotype.Service;
 
@@ -29,6 +30,7 @@ public class BookMapper {
                 .shareable(book.isShareable())
                 .owner(book.getOwner().fullName())
                 //Todo: Cover is left. Implementing later.........
+                .cover(FileUtils.readFileFromLocation(book.getBookCover()))
                 .build();
     }
 

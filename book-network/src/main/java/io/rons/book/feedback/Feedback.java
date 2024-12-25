@@ -1,5 +1,6 @@
-package io.rons.book.book;
+package io.rons.book.feedback;
 
+import io.rons.book.book.Book;
 import io.rons.book.common.BaseEntity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
